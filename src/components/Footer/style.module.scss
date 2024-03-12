@@ -1,0 +1,17 @@
+.contactContainer {
+    display: flex;
+    align-items: center;
+    gap: 25rem;
+    height: 196px;
+}
+
+.contactList>h1 {
+    padding-bottom: 10px;
+}
+
+.imgContact {
+    max-width: 100%;
+    width: 19px;
+    height: 19px;
+    margin-right: 15%;
+}
