@@ -1,0 +1,22 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 1320px;
+    height: 100px;
+}
+
+.imgMyLogo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+}
