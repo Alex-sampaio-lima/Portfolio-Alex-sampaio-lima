@@ -1,0 +1,30 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    border-bottom: 2px solid white;
+    color: var(--white-color);
+
+
+    width: 114px;
+    height: 39px;
+    border-radius: 12px;
+
+}
+
+.btn2 {
+    border-radius: 25px;
+    border-top: solid 2px #FFF;
+    border-right: solid 2px #FFF;
+    border-top-right-radius: 0px;
+    width: 287px;
+    height: 86px;
+}
+
+.inverter-color {
+    filter: invert(100%);
+}
