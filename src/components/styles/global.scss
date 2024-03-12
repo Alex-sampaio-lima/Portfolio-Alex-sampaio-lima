@@ -1,0 +1,27 @@
+:root {
+    --font-primary: 'Inter', sans-serif;
+
+    --black-color: #181818;
+    --purple-color: #7917c4;
+    --white-color: #FFFFFF;
+}
+
+body {
+    background-image: linear-gradient(to left, rgb(64, 64, 68), #1c1c1c);
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    border-top: 0.0625rem solid var(--white-color);
+    border-bottom: 0.0625rem solid var(--white-color);
+}
+
+.titleMargin {
+    margin-bottom: 1rem;
+}
+
+.iconImg {
+    width: 1.875rem;
+    height: 1.875rem;
+}
