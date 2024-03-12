@@ -1,0 +1,43 @@
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 500px;
+    height: 520px;
+    border: 4px solid  #ffffff;
+    border-top: 0px;
+    border-bottom: 4px;
+    border-radius: 1.5625rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.containerProjectImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 466px;
+    height: 200px;
+}
+
+.projectImg {
+    width: 350px;
+    height: 180px;
+    border-radius: 25px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.containerProjectLink{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.iconProjectImg {
+    width: 63px;
+    height: 17px;
+}
+
