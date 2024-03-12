@@ -1,0 +1,29 @@
+.containerBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 100%;
+    width: 1320px;
+    height: 17.1875rem;
+
+}
+
+.containerText {
+    display: flex;
+    flex-direction: column;
+
+    width: 25rem;
+    height: 14.8125rem;
+}
+
+.containerImage {
+    display: flex;
+}
+
+.imgBanner {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 6px solid white;
+}
