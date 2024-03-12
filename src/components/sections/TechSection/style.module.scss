@@ -1,0 +1,21 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100px;
+}
+
+.textContainer {
+    display: flex;
+    width: 81rem;
+    max-width: 100%;
+}
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 56.25rem;
+    max-width: 100%;
+}
