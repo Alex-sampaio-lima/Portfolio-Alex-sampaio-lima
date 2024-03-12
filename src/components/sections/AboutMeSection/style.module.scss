@@ -1,0 +1,25 @@
+.containerText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 1320px;
+    height: 200px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    width: 25rem;
+    height: auto;
+    gap: 0.9375rem;
+}
+
+.paragraphContainer {
+    display: flex;
+    align-items: center;
+    width: 38.125rem;
+    height: 10.375rem;
+    max-height: max-content;
+}
