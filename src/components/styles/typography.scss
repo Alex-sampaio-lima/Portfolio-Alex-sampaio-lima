@@ -1,0 +1,76 @@
+.title1 {
+    color: var(--white-color);
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    
+
+    &.border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid white;
+        border-radius: 12px;
+        width: 114px;
+        height: 39px;
+    }
+}
+
+.title2 {
+    color: var(--white-color);
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-shadow: 0px 0px 3px;
+}
+
+.title3 {
+    color: var(--purple-color);
+    font-family: var(--font-primary);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.title4 {
+    color: var(--white-color);
+    font-family: var(--font-primary);
+    font-size: 1.375rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.title5 {
+    color: var(--white-color);
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-shadow: 0px 0px 3px;
+}
+
+.text1 {
+    color: var(--purple-color);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+
+    &.cyan {
+        color: #10bcaa;
+    }
+}
+
+.paragraph {
+    color: var(--white-color);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+
+    &.aboutMeFormatted {
+        text-align: justify;
+    }
+}
