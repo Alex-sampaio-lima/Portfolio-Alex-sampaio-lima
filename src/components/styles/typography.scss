@@ -10,10 +10,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 2px solid white;
-        border-radius: 12px;
-        width: 114px;
-        height: 39px;
+        border-bottom: 0.125rem solid white;
+        border-radius: 0.75rem;
+        width: 7.125rem;
+        height: 2.4375rem;
     }
 }
 
@@ -23,7 +23,7 @@
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.4;
-    text-shadow: 0px 0px 3px;
+    text-shadow: 0rem 0rem 0.1875rem;
 }
 
 .title3 {
@@ -48,7 +48,7 @@
     font-size: 3rem;
     font-weight: 800;
     line-height: 1.4;
-    text-shadow: 0px 0px 3px;
+    text-shadow: 0rem 0rem 0.1875rem;
 }
 
 .text1 {
@@ -74,6 +74,6 @@
         text-align: justify;
     }
     &.littleText {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }

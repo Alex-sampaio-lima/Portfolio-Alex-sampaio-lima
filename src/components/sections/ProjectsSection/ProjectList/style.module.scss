@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 500px;
-    height: 520px;
-    border: 4px solid  #ffffff;
-    border-top: 0px;
-    border-bottom: 4px;
+    width: 31.25rem;
+    height: 32.5rem;
+    border: 0.25rem solid  #ffffff;
+    border-top: 0rem;
+    border-bottom: 0.25rem;
     border-radius: 1.5625rem;
     padding: 1rem;
     gap: 1rem;
@@ -16,14 +16,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 466px;
-    height: 200px;
+    width: 29.125rem;
+    height: 12.5rem;
 }
 
 .projectImg {
-    width: 350px;
-    height: 180px;
-    border-radius: 25px;
+    width: 21.875rem;
+    height: 11.25rem;
+    border-radius: 1.5625rem;
 }
 
 .imageContainer {
@@ -34,10 +34,10 @@
 .containerProjectLink{
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 0.375rem;
 }
 .iconProjectImg {
-    width: 63px;
-    height: 17px;
+    width: 3.9375rem;
+    height: 1.0625rem;
 }
 
