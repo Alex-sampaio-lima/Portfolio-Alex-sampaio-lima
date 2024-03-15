@@ -23,3 +23,47 @@
     height: 10.375rem;
     max-height: max-content;
 }
+
+
+@media (max-width: 767px) {
+    .containerAboutSection {
+        margin-top: 3.125rem;
+        height: 35rem;
+    }
+
+    .containerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        width: 82.5rem;
+        height: 12.5rem;
+        gap: 0.625rem;
+    }
+
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: max-content;
+        width: 25rem;
+        height: auto;
+        gap: 0.9375rem;
+    }
+
+    .paragraphContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 16.9375rem;
+        height: 10.375rem;
+        max-height: 100%;
+    }
+
+    .paragraphContainer p {
+
+        width: 16.9375rem;
+        max-width: 100%;
+        height: 30rem;
+    }
+}
