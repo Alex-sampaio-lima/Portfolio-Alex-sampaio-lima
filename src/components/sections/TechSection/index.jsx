@@ -4,7 +4,7 @@ import { technologies } from "../../../data/technologies"
 
 export function TechSection() {
     return (
-        <section id="tecnoSection">
+        <section id="tecnoSection" className={`${style.containerTecnoSection}`}>
             <div className={`${style.listContainer} container listContainer padding marginContainer`}>
                 <div className={style.textContainer}>
                     <h1 className="title2 titleMargin">Tecnologias</h1>

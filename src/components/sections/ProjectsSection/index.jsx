@@ -14,7 +14,7 @@ import "swiper/css/effect-fade"
 register();
 export function ProjectsSection() {
     return (
-        <section id="projectSection">
+        <section id="projectSection" className={`${style.containerProjecSection}`}>
             <div className={`${style.containerProjectCards} container marginContainer`}>
                 <h1 className="title2 titleMargin">Projetos</h1>
                 <Swiper

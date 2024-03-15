@@ -6,12 +6,14 @@ import { TechSection } from "../../components/sections/TechSection"
 
 export function HomePage() {
 
-    return (    
-        <DefaultTemplate>
-            <BannerSection />
-            <AboutMe />
-            <TechSection />
-            <ProjectsSection />
-        </DefaultTemplate>
+    return (
+        <div className="size-p">
+            <DefaultTemplate>
+                <BannerSection />
+                <AboutMe />
+                <TechSection />
+                <ProjectsSection />
+            </DefaultTemplate>
+        </div>
     )
 }

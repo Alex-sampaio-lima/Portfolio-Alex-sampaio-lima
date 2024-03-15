@@ -10,8 +10,8 @@ export function Header() {
                     <a className="title1 border" href="#aboutSection">Sobre</a>
                     <a className="title1 border" href="#tecnoSection">Stack</a>
                     <a className="title1 border" href="#projectSection">Projetos</a>
+                    <a className="title1 border" href="https://wa.me/5511940264105" target="_blank">Contato</a>
                 </div>
-                <a className="btn" href="https://wa.me/5511940264105" target="_blank">Contato</a>
             </div>
         </header >
     )
