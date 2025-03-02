@@ -14,6 +14,7 @@
     width: 25rem;
     height: auto;
     gap: 0.9375rem;
+    margin-right: 10px;
 }
 
 .paragraphContainer {
@@ -24,11 +25,56 @@
     max-height: max-content;
 }
 
+@media (max-width: 768px) {
 
-@media (max-width: 767px) {
+    .containerAboutSection {
+        display: flex;
+        height: 370px;
+        width: 450px;
+        padding: 10px;
+    }
+
+    .containerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        // max-width: 100%;
+        width: 400px;
+        height: 346px;
+        // gap: 65px;
+    }
+
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // max-width: max-content;
+        width: 400px;
+        // height: 340px;
+        // gap: 0.9375rem;
+    }
+
+    .paragraphContainer {
+        display: flex;
+        width: 485px;
+        height: 260px;
+    }
+
+    // .paragraphContainer p {
+    //     width: 16.9375rem;
+    //     max-width: 100%;
+    //     height: 30rem;
+    // }
+}
+
+
+@media (max-width: 475px) {
+
     .containerAboutSection {
         margin-top: 3.125rem;
         height: 35rem;
+        width: 100%;
     }
 
     .containerText {
@@ -61,7 +107,6 @@
     }
 
     .paragraphContainer p {
-
         width: 16.9375rem;
         max-width: 100%;
         height: 30rem;
