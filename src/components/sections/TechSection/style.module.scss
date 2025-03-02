@@ -20,8 +20,38 @@
     max-width: 100%;
 }
 
-
 @media (max-width: 768px) {
+    .containerTecnoSection {
+        padding: 10px;
+    }
+
+    // .listContainer {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     max-width: 100%;
+    //     width: 6.25rem;
+    // }
+
+    // .textContainer {
+    //     display: flex;
+    //     justify-content: center;
+    //     width: 25rem;
+    //     max-width: 100%;
+    // }
+
+    .ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 56.25rem;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 475px) {
     .containerTecnoSection {
         margin-top: 3.125rem;
     }
@@ -33,14 +63,14 @@
         max-width: 100%;
         width: 6.25rem;
     }
-    
+
     .textContainer {
         display: flex;
         justify-content: center;
         width: 25rem;
         max-width: 100%;
     }
-    
+
     .ul {
         display: flex;
         flex-direction: row;
