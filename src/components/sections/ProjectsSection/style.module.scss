@@ -17,10 +17,41 @@
     justify-content: center;
 }
 
+@media(max-width: 768px) {
+    .containerProjecSection {
+        padding: 10px;
+    }
 
-@media(max-width:767px) {
+    // .containerProjectCards {
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+    // .containerProjectCards h1 {
+    //     display: flex;
+    //     justify-content: center;
+    // }
+
+    // .containerCards {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     flex-wrap: wrap;
+    //     gap: 1rem;
+    // }
+
+    // .containerSwiperSlide {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
+
+}
+
+@media(max-width: 475px) {
     .containerProjecSection {
         margin-top: 3.125rem;
+        padding: 0px;
     }
 
     .containerProjectCards {
