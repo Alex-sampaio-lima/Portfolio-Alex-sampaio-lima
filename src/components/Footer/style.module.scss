@@ -17,8 +17,39 @@
 }
 
 
+@media (max-width: 768px) {
+    // footer {
+    //     margin-top: 100px;
+    // }
 
-@media (max-width: 767px) {
+    .contactContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0rem;
+        height: 12.25rem;
+    }
+
+    // .contactList>h1 {
+    //     padding-bottom: 0.625rem;
+    // }
+
+
+
+    // .imgContact {
+    //     max-width: 100%;
+    //     width: 1.1875rem;
+    //     height: 1.1875rem;
+    //     margin-right: 15%;
+    // }
+
+    // .imgContact p {
+    //     border: 1px solid rgb(19, 19, 204);
+    // }
+}
+
+
+@media (max-width: 475px) {
     footer {
         margin-top: 100px;
     }
