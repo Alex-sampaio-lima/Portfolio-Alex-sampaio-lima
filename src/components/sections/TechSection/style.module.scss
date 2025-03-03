@@ -14,13 +14,15 @@
 
 .ul {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 56.25rem;
     max-width: 100%;
 }
 
-@media (max-width: 768px) {
+// @media (max-width: 768px) {
+@media (max-width: 970px) {
     .containerTecnoSection {
         padding: 10px;
     }
@@ -33,12 +35,12 @@
     //     width: 6.25rem;
     // }
 
-    // .textContainer {
-    //     display: flex;
-    //     justify-content: center;
-    //     width: 25rem;
-    //     max-width: 100%;
-    // }
+    .textContainer {
+        display: flex;
+        justify-content: center;
+        // width: 25rem;
+        max-width: 100%;
+    }
 
     .ul {
         display: flex;
@@ -51,7 +53,8 @@
 }
 
 
-@media (max-width: 475px) {
+// @media (max-width: 475px) {
+@media (max-width: 555px) {
     .containerTecnoSection {
         margin-top: 3.125rem;
     }

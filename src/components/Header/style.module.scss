@@ -24,7 +24,8 @@
     gap: 16px;
 }
 
-@media (max-width: 768px) {
+// @media (max-width: 768px) {
+@media (max-width: 970px) {
     .headerContainer {
         display: flex;
         max-width: 100%;
@@ -40,7 +41,8 @@
     // }
 }
 
-@media (max-width: 475px) {
+// @media (max-width: 475px) {
+@media (max-width: 555px) {
     .headerContainer {
         display: flex;
         justify-content: space-between;
