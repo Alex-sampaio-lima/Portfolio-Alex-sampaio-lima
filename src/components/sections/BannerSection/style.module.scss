@@ -20,10 +20,17 @@
 }
 
 .imgBanner {
-    width: 15.625rem;
-    height: 15.625rem;
+    width: 250px;
+    /* 15.625rem = 250px (1rem = 16px) */
+    height: 250px;
     border-radius: 50%;
-    border: 0.375rem solid white;
+    border: 6px solid white;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    /* Adicione para centralizar */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
 }
 
 

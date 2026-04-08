@@ -1,7 +1,7 @@
 import bannerImage from "../../../assets/banner-img.png"
 import style from "../../sections/BannerSection/style.module.scss"
 import { username } from "../../../data/user"
-import MyPhoto from "../../../assets/MyPhoto.webp"
+import MyPhoto from "../../../assets/MyPhoto.jpeg"
 
 export function BannerSection() {
 
