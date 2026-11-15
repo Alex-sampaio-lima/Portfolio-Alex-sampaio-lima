@@ -2,11 +2,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
     &:hover {
+        transform: translateY(-4px);
         border-color: var(--border-strong);
         box-shadow: var(--glow-cyan), var(--glow-violet);
+
+        .openHint {
+            color: var(--bg);
+            background: var(--text);
+        }
 
         .projectImg {
             transform: scale(1.05);
@@ -55,6 +62,44 @@
     border-radius: 6px;
 }
 
+.openHint {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 1;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    background: rgba(var(--bg-rgb), 0.9);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    transition: color 0.3s, background 0.3s;
+}
+
+// link "esticado": cobre o card todo
+.cardLink {
+    color: inherit;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border-radius: 18px;
+    }
+
+    &:focus-visible {
+        outline: none;
+
+        &::after {
+            outline: 2px solid var(--text);
+            outline-offset: 3px;
+        }
+    }
+}
+
 .body {
     flex: 1;
     display: flex;
@@ -76,6 +121,9 @@
 }
 
 .link {
+    // acima do link esticado, para continuarem clicáveis por conta própria
+    position: relative;
+    z-index: 2;
     display: inline-flex;
     align-items: center;
     gap: 8px;
