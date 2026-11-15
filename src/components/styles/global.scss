@@ -1,28 +1,214 @@
 :root {
-    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+    --font-primary: 'Space Grotesk', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
 
-    --black-color: #181818;
-    --purple-color: #7917c4;
-    --white-color: #FFFFFF;
+    // paleta monocromática inspirada na logo (preto sobre branco)
+    --bg-rgb: 244, 244, 241;
+    --accent-rgb: 12, 12, 12;      // tinta preta
+    --accent2-rgb: 110, 110, 110;  // grafite
+    --accent3-rgb: 175, 175, 175;  // prata
+
+    --bg: rgb(var(--bg-rgb));
+    --bg-2: #ffffff;
+    --surface: rgba(255, 255, 255, 0.72);
+    --surface-hover: #ffffff;
+    --border: rgba(var(--accent-rgb), 0.1);
+    --border-strong: rgba(var(--accent-rgb), 0.6);
+
+    --cyan: rgb(var(--accent-rgb));
+    --violet: rgb(var(--accent2-rgb));
+    --pink: rgb(var(--accent3-rgb));
+    --gradient: linear-gradient(90deg, #0c0c0c, #5a5a5a 60%, #9a9a9a);
+
+    --text: #0c0c0c;
+    --text-soft: #2e2e2e;
+    --muted: #5f5f5f;
+
+    --glow-cyan: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --glow-violet: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+    // legado
+    --black-color: var(--text);
+    --purple-color: var(--violet);
+    --white-color: var(--bg);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-    // background-image: linear-gradient(356deg, rgb(64, 64, 68), #1c1c1c);
-    background-image: linear-gradient(to left, rgb(64, 64, 68), #1c1c1c);
-    width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(ellipse 60% 50% at 85% 10%, rgba(var(--accent2-rgb), 0.18), transparent 70%),
+        radial-gradient(ellipse 50% 45% at 10% 40%, rgba(var(--accent-rgb), 0.12), transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(var(--accent3-rgb), 0.1), transparent 70%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-.line {
-    border-top: 0.0625rem solid var(--white-color);
-    border-bottom: 0.0625rem solid var(--white-color);
+// grade cibernética de fundo
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(var(--accent-rgb), 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--accent-rgb), 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 100%);
+    animation: gridMove 18s linear infinite;
 }
 
-.titleMargin {
-    margin-bottom: 1rem;
+// linhas de scan sutis
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(var(--accent-rgb), 0.02) 0 1px, transparent 1px 3px);
+}
+
+@keyframes gridMove {
+    to {
+        background-position: 0 56px, 56px 0;
+    }
+}
+
+::selection {
+    background: var(--cyan);
+    color: var(--bg);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--cyan), var(--violet));
+    border-radius: 8px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding-bottom: 120px;
+}
+
+// cabeçalho de seção
+.sectionHead {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.sectionTag {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+
+    &::before {
+        content: "// ";
+        color: var(--violet);
+    }
+}
+
+.sectionTitle {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--border-strong), transparent);
+    }
+}
+
+.gradientText {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+// painel de vidro com cantos em colchete
+.glass {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.brackets {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border: 2px solid var(--cyan);
+        pointer-events: none;
+    }
+
+    &::before {
+        top: -1px;
+        left: -1px;
+        border-right: 0;
+        border-bottom: 0;
+        border-top-left-radius: 18px;
+    }
+
+    &::after {
+        bottom: -1px;
+        right: -1px;
+        border-left: 0;
+        border-top: 0;
+        border-bottom-right-radius: 18px;
+        border-color: var(--violet);
+    }
 }
 
 .iconImg {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
 }

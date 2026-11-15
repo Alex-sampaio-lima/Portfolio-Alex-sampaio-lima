@@ -1,17 +1,18 @@
 import { TechList } from "./TechList"
-import style from ".././../../components/sections/TechSection/style.module.scss"
+import style from "./style.module.scss"
 import { technologies } from "../../../data/technologies"
 
 export function TechSection() {
     return (
-        <section id="tecnoSection" className={`${style.containerTecnoSection}`}>
-            <div className={`${style.listContainer} container listContainer padding marginContainer`}>
-                <div className={style.textContainer}>
-                    <h1 className="title2 titleMargin">Tecnologias</h1>
+        <section id="tecnoSection">
+            <div className="container">
+                <div className="sectionHead">
+                    <span className="sectionTag">02 · stack</span>
+                    <h2 className="sectionTitle">Tecnologias</h2>
                 </div>
                 <ul className={style.ul}>
-                    {technologies.map(item => (
-                        <TechList key={item.id} name={item.name} img={item.img} />
+                    {technologies.map((item, i) => (
+                        <TechList key={item.id} index={i} name={item.name} img={item.img} invert={item.invert} />
                     ))}
                 </ul>
             </div>

@@ -1,30 +1,39 @@
 .btn {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    font-family: var(--font-primary);
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 26px;
+    font-family: var(--font-mono);
     font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.4;
-    border-bottom: 0.125rem solid white;
-    color: var(--white-color);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--text);
+    border-radius: 10px;
+    box-shadow: var(--glow-cyan);
+    transition: transform 0.25s, box-shadow 0.25s;
 
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+    }
 
-    width: 7.125rem;
-    height: 2.4375rem;
-    border-radius: 0.75rem;
+    &.ghost {
+        color: var(--cyan);
+        background: transparent;
+        border: 1px solid var(--border-strong);
+        box-shadow: none;
 
-}
-
-.btn2 {
-    border-radius: 1.5625rem;
-    border-top: solid 0.125rem #FFF;
-    border-right: solid 0.125rem #FFF;
-    border-top-right-radius: 0rem;
-    width: 17.9375rem;
-    height: 5.375rem;
+        &:hover {
+            background: var(--surface-hover);
+            box-shadow: var(--glow-cyan);
+        }
+    }
 }
 
 .inverter-color {
-    filter: invert(100%);
+    filter: none;
 }

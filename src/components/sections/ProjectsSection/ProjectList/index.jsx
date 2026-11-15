@@ -1,27 +1,26 @@
-import style from "../ProjectList/style.module.scss"
-import gitIcon from "../../../../assets/git-icon.png"
+import style from "./style.module.scss"
 
-export function PojectList({ title, paragraph, git, img, vercel, vercelIcon, githubIcon }) {
+export function PojectList({ index, title, paragraph, git, img, vercel, vercelIcon, githubIcon }) {
     return (
-        <>
-            <li className={`${style.projectCard}`}>
-                <div className={`${style.containerProjectImg}`}>
-                    <img className={`${style.projectImg}`} src={img} alt="Imagem do Projeto" />
-                </div>
-                <div className={style.imageContainer}>
-                    <p className="title4">{title}</p>
-                </div>
-                <h2 className="paragraph">{paragraph}</h2>
-                <div className={`${style.containerProjectLink}`}>
-                    <a href={vercel} className="text1 cyan" target="_blank">
-                        <img className={`${style.iconProjectImg} inverter-color`} src={vercelIcon} alt="Icon do Vercel" />
+        <article className={`${style.projectCard} glass brackets`}>
+            <div className={style.imageWrap}>
+                <img className={style.projectImg} src={img} alt={`Prévia do projeto ${title}`} />
+                <span className={style.badge}>PRJ_{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <div className={style.body}>
+                <h3 className="title4">{title}</h3>
+                <p className={`paragraph ${style.description}`}>{paragraph}</p>
+                <div className={style.links}>
+                    <a href={vercel} className={style.link} target="_blank" rel="noreferrer">
+                        <img className={`${style.vercelIcon} inverter-color`} src={vercelIcon} alt="" />
+                        Deploy
                     </a>
-                    <a href={git} className="text1 cyan" target="_blank">
-                        {/* <img src={gitIcon} alt="Logo do github" /> */}
-                        <img className="inverter-color" src={githubIcon} alt="Icon do Github" />
+                    <a href={git} className={style.link} target="_blank" rel="noreferrer">
+                        <img className={`${style.githubIcon} inverter-color`} src={githubIcon} alt="" />
+                        Código
                     </a>
                 </div>
-            </li >
-        </>
+            </div>
+        </article>
     )
 }

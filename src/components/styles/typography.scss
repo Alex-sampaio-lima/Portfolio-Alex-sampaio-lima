@@ -1,79 +1,28 @@
-.title1 {
-    color: var(--white-color);
-    font-family: var(--font-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.4;
-    
-
-    &.border {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 0.125rem solid white;
-        border-radius: 0.75rem;
-        width: 7.125rem;
-        height: 2.4375rem;
-    }
-}
-
 .title2 {
-    color: var(--white-color);
-    font-family: var(--font-primary);
+    color: var(--text);
+    font-family: var(--font-display);
     font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.4;
-    text-shadow: 0rem 0rem 0.1875rem;
-}
-
-.title3 {
-    color: var(--purple-color);
-    font-family: var(--font-primary);
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.4;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .title4 {
-    color: var(--white-color);
-    font-family: var(--font-primary);
-    font-size: 1.375rem;
-    font-weight: 800;
-    line-height: 1.4;
-}
-
-.title5 {
-    color: var(--white-color);
-    font-family: var(--font-primary);
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.4;
-    text-shadow: 0rem 0rem 0.1875rem;
-}
-
-.text1 {
-    color: var(--purple-color);
-    font-family: var(--font-primary);
-    font-size: 1rem;
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.125rem;
     font-weight: 700;
-    line-height: 1.875rem;
-
-    &.cyan {
-        color: #10bcaa;
-    }
+    line-height: 1.4;
+    letter-spacing: 0.03em;
 }
 
 .paragraph {
-    color: var(--white-color);
+    color: var(--muted);
     font-family: var(--font-primary);
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.875rem;
+    line-height: 1.8;
+}
 
-    &.aboutMeFormatted {
-        text-align: justify;
-    }
-    &.littleText {
-        font-size: 0.875rem;
-    }
+.mono {
+    font-family: var(--font-mono);
 }

@@ -1,39 +1,47 @@
-import { PojectList } from "./ProjectList";
-import style from "../ProjectsSection/style.module.scss";
-import { projects } from "../../../data/projects";
-import { register } from "swiper/element/bundle"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, EffectFade } from "swiper/modules";
-import { Navigation, Pagination } from "swiper/modules";
+import { PojectList } from "./ProjectList"
+import style from "./style.module.scss"
+import { projects } from "../../../data/projects"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper/modules"
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/effect-fade"
-register();
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+
 export function ProjectsSection() {
     return (
-        <section id="projectSection" className={`${style.containerProjecSection}`}>
-            <div className={`${style.containerProjectCards} container marginContainer`}>
-                <h1 className="title2 titleMargin">Projetos</h1>
+        <section id="projectSection" className={style.containerProjecSection}>
+            <div className="container">
+                <div className="sectionHead">
+                    <span className="sectionTag">03 · portfólio</span>
+                    <h2 className="sectionTitle">Projetos</h2>
+                </div>
                 <Swiper
+                    className={style.swiper}
+                    modules={[Navigation, Pagination]}
                     grabCursor={true}
-                    spaceBetween={50}
+                    spaceBetween={24}
                     slidesPerView={1}
+                    breakpoints={{ 760: { slidesPerView: 2 } }}
                     pagination={{ clickable: true }}
                     navigation
                 >
-                    <div className={`${style.containerCards}`}>
-                        {projects.map(project => (
-                            <SwiperSlide key={project.id} style={{ display: 'flex' }} className={`${style.containerSwiperSlide}`}>
-                                <PojectList title={project.name} paragraph={project.description} git={project.git} img={project.img} vercel={project.vercel} vercelIcon={project.vercelIcon} githubIcon={project.githubIcon} />
-                            </SwiperSlide>
-                        ))}
-                    </div>
+                    {projects.map((project, i) => (
+                        <SwiperSlide key={project.id} className={style.slide}>
+                            <PojectList
+                                index={i}
+                                title={project.name}
+                                paragraph={project.description}
+                                git={project.git}
+                                img={project.img}
+                                vercel={project.vercel}
+                                vercelIcon={project.vercelIcon}
+                                githubIcon={project.githubIcon}
+                            />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
-        </section >
-
+        </section>
     )
 }

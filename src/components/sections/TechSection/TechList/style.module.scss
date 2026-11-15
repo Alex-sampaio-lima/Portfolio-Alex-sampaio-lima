@@ -1,14 +1,79 @@
-.techContainer {
+.techCard {
     display: flex;
-    width: 18.75rem;
-    height: 6.25rem;
-    flex-direction: row;
     align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s, background 0.25s;
+
+    // brilho que varre o card no hover
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(115deg, transparent 30%, rgba(var(--accent-rgb), 0.12) 50%, transparent 70%);
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-strong);
+        background: var(--surface-hover);
+        box-shadow: var(--glow-cyan);
+
+        &::before {
+            transform: translateX(100%);
+        }
+
+        .iconWrap {
+            box-shadow: var(--glow-violet);
+        }
+    }
 }
 
-.techContainer>button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.625rem;
+.index {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--violet);
+    opacity: 0.7;
+}
+
+.iconWrap {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: box-shadow 0.25s;
+}
+
+.name {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+@media (max-width: 555px) {
+    .techCard {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .iconWrap {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        font-size: 0.875rem;
+    }
 }

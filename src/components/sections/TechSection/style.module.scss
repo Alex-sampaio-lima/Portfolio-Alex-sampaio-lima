@@ -1,85 +1,12 @@
-.listContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    width: 6.25rem;
-}
-
-.textContainer {
-    display: flex;
-    width: 81rem;
-    max-width: 100%;
-}
-
 .ul {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 56.25rem;
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
 }
 
-// @media (max-width: 768px) {
-@media (max-width: 970px) {
-    .containerTecnoSection {
-        padding: 10px;
-    }
-
-    // .listContainer {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     max-width: 100%;
-    //     width: 6.25rem;
-    // }
-
-    .textContainer {
-        display: flex;
-        justify-content: center;
-        // width: 25rem;
-        max-width: 100%;
-    }
-
-    .ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 56.25rem;
-        max-width: 100%;
-    }
-}
-
-
-// @media (max-width: 475px) {
 @media (max-width: 555px) {
-    .containerTecnoSection {
-        margin-top: 3.125rem;
-    }
-
-    .listContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-        width: 6.25rem;
-    }
-
-    .textContainer {
-        display: flex;
-        justify-content: center;
-        width: 25rem;
-        max-width: 100%;
-    }
-
     .ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 56.25rem;
-        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 }

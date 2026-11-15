@@ -21,7 +21,7 @@ export const technologies = [
   { id: 5, name: "TypeScript", img: typeScriptIcon },
   { id: 6, name: "Node", img: nodejsIcon },
   { id: 7, name: "Python", img: pythonIcon },
-  { id: 8, name: "Express", img: expressIcon },
+  { id: 8, name: "Express", img: expressIcon, invert: true },
   { id: 9, name: "Django", img: djangoIcon },
   { id: 10, name: "Vite", img: vitejsIcon },
   { id: 11, name: "Axios", img: axiosIcon },
