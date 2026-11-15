@@ -33,6 +33,6 @@ export const projects = [
     vercelIcon: vercelIcon,
     githubIcon: githubIcon,
     git: "https://github.com/Alex-sampaio-lima/KenzieHub-Refatoracao-e-Autenticacao-Completa-Alex-sampaio-lima",
-    vercel: "https://kenziehub-cadastro-e-login-alex-sampaio-lima.vercel.app/",
+    vercel: "https://kenziehub-refatoracao.vercel.app/",
   },
 ]
