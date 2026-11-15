@@ -18,7 +18,6 @@ export function AboutMe() {
                     <div className={`${style.card} glass brackets`}>
                         <div className={style.cardBar} aria-hidden="true">
                             <span /><span /><span />
-                            <p>about_me.txt</p>
                         </div>
                         <p className={`paragraph ${style.text}`}>
                             Um desenvolvedor Full Stack e também um apreciador de games, sou uma pessoa curiosa desde criança, que sempre tenta entender como as coisas funcionam e o seu porquê. Comecei estudar programação pois via muitas pessoas falando sobre essa profissão e também pois sempre quis entender esse mundo que nos filmes e mídia aparentava ser um “bicho de sete cabeças” e algo que só pessoas muito inteligentes conseguiriam realizar. Ao ter o primeiro contato percebi que era complicado mas não impossível, comecei com cursos básicos até um mais avançado e hoje em dia já realizei mais de 40 projetos entre back e front end.
