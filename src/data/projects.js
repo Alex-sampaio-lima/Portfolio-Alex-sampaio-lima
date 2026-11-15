@@ -1,6 +1,6 @@
 import hamburgueria from "../assets/hamburgueria-v2.jpg"
 import nuKenzie from "../assets/nu-kenzie-v2.jpg"
-import kenzieHub from "../assets/kenziehub.png"
+import kenzieHub from "../assets/kenziehub-v2.jpg"
 import vercelIcon from "../assets/vercelIcon.png"
 import githubIcon from "../assets/githubIcon.svg"
 
