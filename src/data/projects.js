@@ -1,4 +1,4 @@
-import hamburgueria from "../assets/hamburgueria.png"
+import hamburgueria from "../assets/hamburgueria-v2.jpg"
 import nuKenzie from "../assets/nu-kenzie.png"
 import kenzieHub from "../assets/kenziehub.png"
 import vercelIcon from "../assets/vercelIcon.png"
@@ -32,7 +32,7 @@ export const projects = [
     img: kenzieHub,
     vercelIcon: vercelIcon,
     githubIcon: githubIcon,
-    git: "https://github.com/Kenzie-Academy-Brasil-Developers/hamburgueria-Alex-sampaio-lima",
+    git: "https://github.com/Alex-sampaio-lima/KenzieHub-Refatoracao-e-Autenticacao-Completa-Alex-sampaio-lima",
     vercel: "https://kenziehub-cadastro-e-login-alex-sampaio-lima.vercel.app/",
   },
 ]
