@@ -87,6 +87,25 @@
     background: conic-gradient(from 0deg, var(--cyan), var(--violet), var(--pink), var(--cyan));
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
     animation: float 6s ease-in-out infinite;
+    cursor: pointer;
+    // `scale` (e não `transform`) para não conflitar com a animação float
+    // velocidade do zoom da foto: mude só esta variável
+    --zoom-time: 1s;
+    transition: scale var(--zoom-time) ease-in-out, box-shadow var(--zoom-time) ease-in-out;
+
+    &:hover {
+        scale: 1.08;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.26);
+    }
+}
+
+// global.scss zera as transições quando o sistema pede "reduzir animações"
+// (ex.: Windows com "Efeitos de animação" desligado). O zoom da foto é suave
+// e só acontece no hover, então fica fora dessa regra.
+@media (prefers-reduced-motion: reduce) {
+    .ring {
+        transition: scale var(--zoom-time) ease-in-out, box-shadow var(--zoom-time) ease-in-out !important;
+    }
 }
 
 .imgBanner {
